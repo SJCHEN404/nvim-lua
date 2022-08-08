@@ -1,0 +1,18 @@
+{
+	"snip1": {
+		"prefix": "inc",
+		"body": [
+			"#include <bits/stdc++.h>",
+            "using namespace std;"
+		]
+	},
+	"snip2": {
+		"prefix": "main",
+		"body": [
+			"int main() {",
+            "   ",
+            "   return 0;",
+            "}"
+		]
+	}
+}
