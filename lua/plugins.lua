@@ -140,4 +140,13 @@ return require('packer').startup(function()
     --
     -- todo
     use "folke/todo-comments.nvim"
+
+    -- translator
+    use 'voldikss/vim-translator'
+
+    -- outline
+    use 'stevearc/aerial.nvim'
+
+    -- git
+    use 'lewis6991/gitsigns.nvim'
 end)

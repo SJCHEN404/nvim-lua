@@ -78,6 +78,7 @@ local opts = {
 local mappings = {
     ["\\"] = { "<cmd>ToggleTerm size=30 dir=~/Desktop direction=horizontal<cr>", "Dowm Terminal" },
     ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+    ["o"] = { "<cmd>AerialToggle<cr>", "Outline" },
   t = {
     name = "Telescope",
     ["a"] = { "<cmd>Alpha<cr>", "Welcome" },
@@ -140,16 +141,24 @@ local mappings = {
   },
 
 
-  -- t = {
-  --   name = "Terminal",
-  --   n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-  --   u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-  --   t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-  --   p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-  --   f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-  --   h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-  --   v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-  -- },
+  f = {
+    name = "Translate",
+    t = { "<cmd>Translate<cr>", "Translation in cmdline" },
+    w = { "<cmd>TranslateW<cr>", "Translation in window" },
+    x = { "<cmd>TranslateX<cr>", "Translate the text in clipboard" },
+    h = { "<cmd>TranslateH<cr>", "Translation history" },
+  },
+
+  g = {
+    name = "gitsigns",
+    s = { "<cmd>Gitsigns stage_hunk<CR>", "stage_hunk" },
+    r = { "<cmd>Gitsigns reset_hunk<CR>", "reset_hunk" },
+    S = { "<cmd>Gitsigns stage_buffer<CR>", "stage_buffer" },
+    u = { "<cmd>Gitsigns undo_stage_hunk<CR>", "undo_stage_hunk" },
+    R = { "<cmd>Gitsigns reset_buffer<CR>", "reset_buffer" },
+    p = { "<cmd>Gitsigns preview_hunk<CR>", "preview_hunk" },
+    d = { "<cmd>Gitsigns diffthis<CR>", "diffthis" },
+  }
 }
 
 which_key.setup(setup)
