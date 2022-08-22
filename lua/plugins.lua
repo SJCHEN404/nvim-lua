@@ -10,6 +10,7 @@ return require('packer').startup(function()
     -- lsp
     use 'neovim/nvim-lspconfig'
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+    use "ray-x/lsp_signature.nvim"
 
     -- comment
     use {
@@ -71,13 +72,8 @@ return require('packer').startup(function()
     })
 
     -- Welcome Home
-    use {
-        'goolord/alpha-nvim',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
-        end,
-    }
+    use 'goolord/alpha-nvim'
+
     -- cmp plugins
     use {
         "hrsh7th/nvim-cmp",
@@ -149,4 +145,13 @@ return require('packer').startup(function()
 
     -- git
     use 'lewis6991/gitsigns.nvim'
+
+    -- indent
+    use "lukas-reineke/indent-blankline.nvim"
+    
+    -- smooth move
+    use { 'rainbowhxch/accelerated-jk.nvim' }
+
+    -- cmake
+    use 'Shatur/neovim-cmake'
 end)

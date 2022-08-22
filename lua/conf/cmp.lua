@@ -31,11 +31,11 @@ local kind_icons = {
     Value = " ",
     Variable = " ",
 }
--- require("luasnip.loaders.from_snipmate").load()
--- require("luasnip.loaders.from_snipmate").lazy_load({ path = "../my-snippets" }) -- load snippets from my-snippets
---
+require("luasnip.loaders.from_snipmate").load()
+
+
 require("luasnip.loaders.from_vscode").lazy_load()
-require("luasnip.loaders.from_vscode").load({paths = "../my-snippets"})
+require("luasnip.loaders.from_vscode").load({paths = "~/.config/nvim/lua/my-snippets"})
 --
 -- nvim-cmp setup
 local cmp = require 'cmp'

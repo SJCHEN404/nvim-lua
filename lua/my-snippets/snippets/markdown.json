@@ -1,0 +1,16 @@
+{
+	"snip1": {
+		"prefix": "com",
+		"body": [
+            "---",
+            "title: ${1}",
+            "data:  ${2}",
+            "tags:",
+            "- ${3}",
+            "categories:",
+            "- ${4}",
+            "mathjax: false",
+            "---"
+		]
+	}
+}

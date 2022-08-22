@@ -21,10 +21,13 @@ vim.o.cursorline = true
 -- leader
 vim.g.mapleader = ' '
 
+
 -- clipboard
 vim.cmd[[
 set clipboard=unnamedplus
 ]]
+
+vim.opt.autoread = true
 
 -- scrolloff
 vim.o.scrolloff = 6
@@ -36,6 +39,8 @@ vim.cmd[[
 
 -- search highligh
 vim.o.hlsearch = true
+
+vim.api.nvim_command(':filetype plugin on')
 
 
 vim.cmd[[

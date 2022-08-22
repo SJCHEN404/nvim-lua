@@ -31,6 +31,9 @@ map("n", "tt", ":NvimTreeToggle<CR>")
 map("n", "<C-s>", "<Esc>:w<CR>q")
 
 
+
+vim.keymap.set("n", "<LEADER><CR>", "<cmd>nohlsearch<CR>", opts)
+
 --================================
 --========== bufferline ==========
 --================================
@@ -51,19 +54,19 @@ map("n", "<C-v>", "<Plug>(wildfire-quick-select)" )
 --================================
 
 
-map("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
-map("n", "<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition: '))<cr>", opts)
-map("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opts)
-map("n", "<F9>", "<cmd>lua require'dap'.run_last()<cr>", opts)
-map('n', '<F10>', '<cmd>lua require"dap.dap-util".reload_continue()<CR>', opts)
-map("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
-map("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", opts)
-map("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
-map("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opts)
-map("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
-
+-- map("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
+-- map("n", "<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition: '))<cr>", opts)
+-- map("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opts)
+-- map("n", "<F9>", "<cmd>lua require'dap'.run_last()<cr>", opts)
+-- map('n', '<F10>', '<cmd>lua require"dap.dap-util".reload_continue()<CR>', opts)
+-- map("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
+-- map("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", opts)
+-- map("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
+-- map("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opts)
+-- map("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
+--
 --================================
---========== debug ===============
+--========== markdown ============
 --================================
 
 vim.keymap.set("n", "<LEADER>mp", "<cmd>MarkdownPreview<CR>", opt)
@@ -100,4 +103,12 @@ vim.api.nvim_set_keymap("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", {})
 -- vim.api.nvim_set_keymap("n", ";dn", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', {})
 -- vim.api.nvim_set_keymap("n", "gl", '<cmd>lua vim.diagnostic.open_float()<CR>', {})
 -- vim.api.nvim_set_keymap("n", "<leader>dq", "<cmd>lua vim.diagnostic.setloclist()<CR>", {})
-vim.api.nvim_set_keymap("n", "<leader>fm", '<cmd>lua vim.lsp.buf.formatting()<CR>', {})
+-- vim.api.nvim_set_keymap("n", "<leader>fm", '<cmd>lua vim.lsp.buf.formatting()<CR>', {})
+
+
+--================================
+--============ lsp ===============
+--================================
+
+vim.api.nvim_set_keymap('n', 'j', '<Plug>(accelerated_jk_gj)', {})
+vim.api.nvim_set_keymap('n', 'k', '<Plug>(accelerated_jk_gk)', {})

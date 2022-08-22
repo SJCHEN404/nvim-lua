@@ -79,6 +79,8 @@ local mappings = {
     ["\\"] = { "<cmd>ToggleTerm size=30 dir=~/Desktop direction=horizontal<cr>", "Dowm Terminal" },
     ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
     ["o"] = { "<cmd>AerialToggle<cr>", "Outline" },
+    [","] = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "Format" },
+    [";"] = { "<cmd>TableModeToggle<cr>", "Format Table" },
   t = {
     name = "Telescope",
     ["a"] = { "<cmd>Alpha<cr>", "Welcome" },
@@ -158,7 +160,19 @@ local mappings = {
     R = { "<cmd>Gitsigns reset_buffer<CR>", "reset_buffer" },
     p = { "<cmd>Gitsigns preview_hunk<CR>", "preview_hunk" },
     d = { "<cmd>Gitsigns diffthis<CR>", "diffthis" },
-  }
+  },
+
+  d = {
+    name = "debug",
+    b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "breakpoint" },
+  ["<F9>"]= { "<cmd>lua require'dap'.run_last()<cr>", "run_last" },
+  ["<F10>"]={ "<cmd>lua require'dap.dap-util'.reload_continue()<CR>", "reload_continue" },
+  ["<F5>"]= { "<cmd>lua require'dap'.continue()<cr>", "continue" },
+  ["<F6>"]= { "<cmd>lua require'dap'.step_over()<cr>", "step_over" },
+  ["<F7>"]= { "<cmd>lua require'dap'.step_into()<cr>", "step_into" },
+  ["<F8>"]= { "<cmd>lua require'dap'.step_out()<cr>", "step_out" },
+    k = { "<cmd>lua require'dapui'.eval()<cr>", "eval" },
+  },
 }
 
 which_key.setup(setup)
